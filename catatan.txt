@@ -1,0 +1,27 @@
+Nodemon
+Tools pertama adalah nodemon, ia bisa dikatakan wajib digunakan selama proses pengembangan. Pasalnya, dengan tools ini kita tak perlu menjalankan ulang server ketika terjadi perubahan pada berkas JavaScript. Nodemon akan mendeteksi perubahan kode JavaScript dan mengeksekusi ulang secara otomatis.
+
+ESLint
+Tools yang kedua adalah ESLint, ia dapat membantu atau membimbing Anda untuk selalu menuliskan kode JavaScript dengan gaya yang konsisten. Seperti yang Anda tahu, JavaScript tidak memiliki aturan yang baku untuk gaya penulisan kode, bahkan penggunaan semicolon. Karena itu, terkadang kita jadi tidak konsisten dalam menuliskannya
+
+
+server.js : Memuat kode untuk membuat, mengonfigurasi, dan menjalankan server HTTP menggunakan Hapi.
+routes.js : Memuat kode konfigurasi routing server seperti menentukan path, method, dan handler yang digunakan.
+handler.js : Memuat seluruh fungsi-fungsi handler yang digunakan pada berkas routes.
+notes.js : Memuat data notes yang disimpan dalam bentuk array objek.
+
+
+ // {
+    //     method: 'POST',
+    //     path: '/notes',
+    //     handler: addNoteHandler,
+    // },
+
+           routes: {
+            cors: {
+                origin: ['http://notesapp-v1.dicodingacademy.com'],
+                // allowCredentials: true,
+            },
+        },
+
+// ngefix error CORS: https://stackoverflow.com/questions/69542810/has-been-blocked-by-cors-policy-the-request-client-is-not-a-secure-context-and
